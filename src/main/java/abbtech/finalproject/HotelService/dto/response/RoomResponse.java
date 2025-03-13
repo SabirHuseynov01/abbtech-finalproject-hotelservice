@@ -1,4 +1,7 @@
 package abbtech.finalproject.HotelService.dto.response;
 
-public class RoomResponse {
+public record RoomResponse(Long id,
+                           String type,
+                           double price,
+                           boolean available) {
 }

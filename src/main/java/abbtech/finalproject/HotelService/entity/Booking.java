@@ -4,23 +4,30 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 @Entity
-@Table(name = "hotels")
+@Table(name = "bookings")
 @Data
-public class Hotel {
+public class Booking {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(nullable = false)
-    private String name;
+    private Long roomId;
 
     @Column(nullable = false)
-    private String location;
+    private String userEmail;
 
     @Column(nullable = false)
-    private double pricePerNight;
+    private String checkInDate;
 
     @Column(nullable = false)
-    private boolean allInclusive;
+    private String checkOutDate;
+
+    @Column(nullable = false)
+    private String comfirmationCode;
+
+    public void setConfirmationCode(String abc123) {
+
+    }
 }

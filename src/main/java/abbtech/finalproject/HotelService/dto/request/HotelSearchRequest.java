@@ -1,4 +1,6 @@
 package abbtech.finalproject.HotelService.dto.request;
 
-public class HotelSearchRequest {
+public record HotelSearchRequest(String location,
+                                 String checkInDate,
+                                 String checkOutDate) {
 }
